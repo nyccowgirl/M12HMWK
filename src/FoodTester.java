@@ -44,13 +44,9 @@ public class FoodTester {
 		int totalServeTime = foodList.stream()
 				.mapToInt(Food::getServeTime)
 				.sum();
-		int programTimeCounterAlt = foodList.stream()
-				.mapToInt(x -> Math.max(x.getCookTime(), x.getServeTime()))
-				.sum();
 		System.out.println("Total Cook Time = " + totalCookTime);
 		System.out.println("Total Serve Time = " + totalServeTime);	
-		System.out.println("Program Time = " + programTimeCounterAlt);
-		// Think this should be 41 instead of 38.
+		System.out.println("Program Time = " + programTimeCounter);
 	}
 
 }

@@ -18,10 +18,9 @@ public class ServeThread implements Runnable {
                 System.out.println("SERVER READY");
                 Food foodServing = queue.take();
                 System.out.println("SERVER STARTING: " + foodServing.toString());
-                Thread.sleep(foodServing.getServeTime());
+                Thread.sleep(foodServing.getServeTime() * 1000);
                 System.out.println("SERVER ENDING: " + foodServing.toString());
             } catch (InterruptedException e) {}
         }
-
     }
 }
